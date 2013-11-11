@@ -13,7 +13,7 @@ Craftable Horse Armor Mod
 
 ### Description ###
 
-[b]Craftable Horse Armor Mod[/b]
+Craftable Horse Armor Mod
 
 * * *
 
