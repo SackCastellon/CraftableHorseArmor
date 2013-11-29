@@ -17,7 +17,7 @@ Craftable Horse Armor Mod
 
 * * *
 
-### Licences ###
+### Licenses ###
 
 #### License of The Mod ####
 
