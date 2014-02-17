@@ -3,15 +3,6 @@
  * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
  * 
  * 		http://creativecommons.org/licenses/by-nc-sa/3.0/
- * 
- * The source code of Craftable Horse Armor Mod created by SackCastellon is
- * licensed under a Creative Commons Attribution 3.0 Unported License,
- * 
- * 		http://creativecommons.org/licenses/by/3.0/
- * 
- * The source code of Craftable Horse Armor Mod created by SackCastellon can be found at:
- * 
- * 		https://github.com/SackCastellon/CraftableHorseArmor
  */
 
 package SackCastellon.craftablehorsearmor;
@@ -50,7 +41,7 @@ public class CraftableHorseArmor {
     	ConfigHandler.loadConfig(new File(event.getModConfigurationDirectory(), Reference.ConfigPath));
     	
 		if (ConfigHandler.CheckVersion) {
-			Version.check(Reference.ID, Reference.VERSION, Reference.URL);
+			Version.check(Reference.ID, Reference.NAME, Reference.VERSION, Reference.URL);
 		}
 		
 	// Items
@@ -65,7 +56,7 @@ public class CraftableHorseArmor {
 			
 		} catch(Exception e) {
 			
-			LogHelper.severe(Reference.ID, "Could not load items.");
+			LogHelper.error(Reference.ID, "Could not load items.");
 		} 
     }
    
@@ -88,7 +79,7 @@ public class CraftableHorseArmor {
 			
 		} catch(Exception e) {
 			
-			LogHelper.severe(Reference.ID, "Could not load recipes.");
+			LogHelper.error(Reference.ID, "Could not load recipes.");
 		} 
     }
    

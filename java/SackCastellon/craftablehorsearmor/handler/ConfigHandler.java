@@ -3,15 +3,6 @@
  * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
  * 
  * 		http://creativecommons.org/licenses/by-nc-sa/3.0/
- * 
- * The source code of Craftable Horse Armor Mod created by SackCastellon is
- * licensed under a Creative Commons Attribution 3.0 Unported License,
- * 
- * 		http://creativecommons.org/licenses/by/3.0/
- * 
- * The source code of Craftable Horse Armor Mod created by SackCastellon can be found at:
- * 
- * 		https://github.com/SackCastellon/CraftableHorseArmor
  */
 
 package SackCastellon.craftablehorsearmor.handler;
@@ -41,7 +32,8 @@ public class ConfigHandler {
 		
 		config = new Configuration(par1);
 		
-		try {
+		try
+		{
 			
 			LogHelper.info(Reference.ID, "Loading config file.");
 			
@@ -63,18 +55,21 @@ public class ConfigHandler {
 			
 			Lead = config.get(Config.RECIPES, "LeadRecipe", true, "Enabled the crafting recipe of the Lead.").getBoolean(true);
 			
-			if (config.hasChanged()) {
-				
+		}
+		
+		catch (Exception e)
+		{
+			LogHelper.info(Reference.ID, "Could not load the config file.");
+		}
+		
+		finally
+		{
+			if (config.hasChanged())
+			{
 				config.save();
-				
 			}
 			
 			LogHelper.info(Reference.ID, "Config file succesfully loaded.");
-			
-		} catch (Exception e) {
-			
-			LogHelper.info(Reference.ID, "Could not load the config file.");
-			
 		}
 	}
 }
