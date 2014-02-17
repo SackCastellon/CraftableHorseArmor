@@ -25,10 +25,12 @@ Craftable Horse Armor Mod
 
 [Craftable Horse Armor Mod](http://www.minecraftforum.net/topic/1876523-) by [SackCastellon](http://www.minecraftforum.net/user/1775848-sackcastellon/) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
-#### License of the Source Code ####
+#### Mod Packs ####
 
-![License](http://i.creativecommons.org/l/by/3.0/80x15.png)
+You are free to use this mod, "Craftable Horse Armor" in your mod pack if and only if you adhere to the following:
 
-[Craftable Horse Armor Mod source code](https://github.com/SackCastellon/CraftableHorseArmor) by [SackCastellon](http://www.minecraftforum.net/user/1775848-sackcastellon/) is licensed under a [Creative Commons Attribution 3.0 Unported License.](http://creativecommons.org/licenses/by/3.0/)
+* Link to this thread.
+* Give proper credits to the original author: SackCastellon
+* Keep it non-profit.
 
 * * *
