@@ -5,10 +5,12 @@
  * 		http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
 
-package SackCastellon.craftablehorsearmor.loader;
+package com.sackcastellon.craftablehorsearmor.loader;
 
 import java.util.Iterator;
 import java.util.List;
+
+import com.sackcastellon.craftablehorsearmor.handler.ConfigHandler;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,7 +19,6 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
-import SackCastellon.craftablehorsearmor.handler.ConfigHandler;
 
 public class RecipeLoader
 {
@@ -104,7 +105,9 @@ public class RecipeLoader
 				{
 					ItemStack is = Leash.next().getRecipeOutput();
 					if (is != null && is.getItem() == Items.lead)
+					{
 						Leash.remove();
+					}
 				};
 	
 			GameRegistry.addRecipe(new ItemStack(Items.lead, 2), new Object[] {"K  ", " S ", "  S", 'K', new ItemStack(ItemLoader.Knot, 1), 'S', Items.string});

@@ -1,21 +1,23 @@
-/*
- * Craftable Horse Armor Mod created by SackCastellon is licensed under a
+/**
+ * Craftable Horse Armor Mod
+ * Copyright © 2013-2014 SackCastellon
+ * This modification and his resources are licensed under a
  * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
  * 
  * 		http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
-
-package SackCastellon.craftablehorsearmor.handler;
+package com.sackcastellon.craftablehorsearmor.handler;
 
 import java.io.File;
 
-import SackCastellon.core.helper.Config;
-import SackCastellon.core.helper.LogHelper;
-import SackCastellon.craftablehorsearmor.reference.Reference;
 import net.minecraftforge.common.config.Configuration;
 
-public class ConfigHandler {
-	
+import com.sackcastellon.core.helper.LogHelper;
+import com.sackcastellon.core.lib.Config;
+import com.sackcastellon.craftablehorsearmor.lib.Reference;
+
+public class ConfigHandler
+{
 	public static Configuration config;
 	
 	public static boolean Hardcore;
@@ -28,13 +30,12 @@ public class ConfigHandler {
 
 	public static boolean CheckVersion;
 	
-	public static void loadConfig(File par1) {
-		
+	public static void loadConfig(File par1)
+	{
 		config = new Configuration(par1);
 		
 		try
 		{
-			
 			LogHelper.info(Reference.ID, "Loading config file.");
 			
 			config.load();
@@ -53,8 +54,7 @@ public class ConfigHandler {
 			
 			NameTag = config.get(Config.RECIPES, "NameTagRecipe", true, "Enabled the crafting recipe of the NameTag.").getBoolean(true);
 			
-			Lead = config.get(Config.RECIPES, "LeadRecipe", true, "Enabled the crafting recipe of the Lead.").getBoolean(true);
-			
+			Lead = config.get(Config.RECIPES, "LeadRecipe", true, "Enabled the crafting recipe of the Lead.").getBoolean(true);	
 		}
 		
 		catch (Exception e)

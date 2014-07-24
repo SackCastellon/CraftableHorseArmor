@@ -1,22 +1,22 @@
-/*
- * Craftable Horse Armor Mod created by SackCastellon is licensed under a
+/**
+ * Craftable Horse Armor Mod
+ * Copyright © 2013-2014 SackCastellon
+ * This modification and his resources are licensed under a
  * Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
  * 
  * 		http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
-
-package SackCastellon.craftablehorsearmor;
+package com.sackcastellon.craftablehorsearmor;
 
 import java.io.File;
 
-import SackCastellon.core.helper.LogHelper;
-import SackCastellon.core.helper.Version;
-
-import SackCastellon.craftablehorsearmor.handler.ConfigHandler;
-import SackCastellon.craftablehorsearmor.loader.ItemLoader;
-import SackCastellon.craftablehorsearmor.loader.RecipeLoader;
-import SackCastellon.craftablehorsearmor.proxy.CommonProxy;
-import SackCastellon.craftablehorsearmor.reference.Reference;
+import com.sackcastellon.core.helper.LogHelper;
+import com.sackcastellon.core.helper.VersionHelper;
+import com.sackcastellon.craftablehorsearmor.handler.ConfigHandler;
+import com.sackcastellon.craftablehorsearmor.lib.Reference;
+import com.sackcastellon.craftablehorsearmor.loader.ItemLoader;
+import com.sackcastellon.craftablehorsearmor.loader.RecipeLoader;
+import com.sackcastellon.craftablehorsearmor.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -27,8 +27,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid=Reference.ID, name=Reference.NAME, version=Reference.VERSION, dependencies=Reference.DEPENDENCIES)
-public class CraftableHorseArmor {	
-	
+public class CraftableHorseArmor
+{	
     @Instance(Reference.ID)
     public static CraftableHorseArmor instance;
     
@@ -36,54 +36,63 @@ public class CraftableHorseArmor {
     public static CommonProxy proxy;
    
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-
+    public void preInit(FMLPreInitializationEvent event)
+    {
     	ConfigHandler.loadConfig(new File(event.getModConfigurationDirectory(), Reference.ConfigPath));
     	
-		if (ConfigHandler.CheckVersion) {
-			Version.check(Reference.ID, Reference.NAME, Reference.VERSION, Reference.URL);
+		if (ConfigHandler.CheckVersion)
+		{
+			VersionHelper.check(Reference.ID, Reference.NAME, Reference.VERSION, Reference.URL);
 		}
 		
 	// Items
     	
-    	LogHelper.info(Reference.ID, "Loading items.");
-    	
-		try {
-
+		try
+		{
+			LogHelper.info(Reference.ID, "Loading items.");
+			
 	    	ItemLoader.load();
-	    	
-			LogHelper.info(Reference.ID, "Items succesfully loaded.");
-			
-		} catch(Exception e) {
-			
+		}
+		
+		catch(Exception e)
+		{
 			LogHelper.error(Reference.ID, "Could not load items.");
-		} 
+		}
+		
+		finally
+		{
+			LogHelper.info(Reference.ID, "Items succesfully loaded.");
+		}
     }
    
     @EventHandler
-    public void load(FMLInitializationEvent event) {
+    public void load(FMLInitializationEvent event)
+    {
     	
 	// Recpes
     	
-    	LogHelper.info(Reference.ID, "Loading recipes.");
-    	
-		try {
+		try
+		{
+			LogHelper.info(Reference.ID, "Loading recipes.");
 			
 			if (ConfigHandler.Hardcore) {
 				RecipeLoader.hardcore();
 			} else {
 				RecipeLoader.normal();
 			}
-			
-			LogHelper.info(Reference.ID, "Recipes succesfully loaded.");
-			
-		} catch(Exception e) {
-			
+		}
+		
+		catch(Exception e)
+		{
 			LogHelper.error(Reference.ID, "Could not load recipes.");
-		} 
+		}
+		
+		finally
+		{
+			LogHelper.info(Reference.ID, "Recipes succesfully loaded.");
+		}
     }
    
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {}
-
 }
