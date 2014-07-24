@@ -6,8 +6,8 @@ Craftable Horse Armor Mod
 - [Minecraft Forum Thread](http://www.minecraftforum.net/topic/1876523-)
 - [Official Wiki](https://github.com/SackCastellon/CraftableHorseArmor/wiki) (Under Construction)
 - [Issue Tracking System](https://github.com/SackCastellon/CraftableHorseArmor/issues)
-- [Source Code](https://github.com/SackCastellon/CraftableHorseArmor)
-- [Language Files](https://github.com/SackCastellon/CraftableHorseArmor/tree/master/resources/assets/craftablehorsearmor/lang) (For anyone who wants to translate the mod to his own language.)
+- [Source Code](https://github.com/SackCastellon/CraftableHorseArmor/tree/master/src)
+- [Language Files](https://github.com/SackCastellon/CraftableHorseArmor/tree/master/src/main/resources/assets/craftablehorsearmor/lang) (For anyone who wants to translate the mod to his own language.)
 
 * * *
 
