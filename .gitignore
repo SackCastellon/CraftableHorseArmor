@@ -55,8 +55,15 @@ $RECYCLE.BIN/
 
 /.settings/*
 /bin/*
-/build/*
+#/build/classes/*
+#/build/dependency-cache/*
+#/build/natives/*
+#/build/resources/*
+#/build/sources/*
+#/build/tmp/*
+#!/build/libs/*
 /config/*
+/core/*
 /eclipse/*
 /gradle/*
 /logs/*
@@ -72,3 +79,4 @@ $RECYCLE.BIN/
 .project
 
 gradlew
+/bin/
